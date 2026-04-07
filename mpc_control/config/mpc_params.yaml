@@ -1,0 +1,27 @@
+mpc_controller:
+  ros__parameters:
+    control_rate: 20.0
+    drone_mass: 1.5
+    mpc_horizon: 20
+    mpc_dt: 0.05
+    
+    position_weight: 10.0
+    velocity_weight: 5.0
+    acceleration_weight: 1.0
+    control_weight: 0.1
+    
+    min_thrust: 0.0
+    max_thrust: 15.0
+
+trajectory_generator:
+  ros__parameters:
+    trajectory_publish_rate: 10.0
+    waypoint_reached_threshold: 0.2
+    
+    circular_trajectory:
+      radius: 5.0
+      height: 5.0
+      num_points: 100
+    
+    hover:
+      duration: 10.0
